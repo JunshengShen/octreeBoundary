@@ -75,6 +75,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -110,13 +113,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="overlap.h" />
-    <ClInclude Include="readStl.h" />
+    <ClCompile Include="generator.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="oct.cpp" />
+    <ClCompile Include="read_stl.cpp" />
+    <ClCompile Include="voxelinfo.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="overlap.cpp" />
-    <ClCompile Include="readStl.cpp" />
+    <ClInclude Include="cache.h" />
+    <ClInclude Include="generator.h" />
+    <ClInclude Include="oct.h" />
+    <ClInclude Include="read_stl.h" />
+    <ClInclude Include="voxelinfo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

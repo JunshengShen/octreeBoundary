@@ -1,31 +1,8 @@
-#include "readStl.h"
+#include "read_stl.h"
 #include <fstream>
 #include <iostream>
 #include <cmath>
 using namespace std;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 int asc2(char a)
 {
@@ -110,7 +87,7 @@ void read_stl::read(string address)
 
 						int location_of_dot;
 						double temp_count = 0;
-
+						
 						for (int i = 0; i < number_of_this; i++)
 						{
 							if (temp_c[i] == '.')
@@ -179,13 +156,13 @@ void read_stl::read(string address)
 								}
 							}
 							if (temp_c[location_of_e + 1] == '-')
-							{
-								temp_count = temp_count*pow(10, -1 * (asc2(temp_c[location_of_e + 2]) * 100
-									+ asc2(temp_c[location_of_e + 3]) * 10 + asc2(temp_c[location_of_e + 4])));
+							{							
+								temp_count = temp_count*pow(10,-1*( asc2(temp_c[location_of_e + 2]) * 100 
+									+asc2(temp_c[location_of_e + 3]) * 10 + asc2(temp_c[location_of_e + 4])));
 							}
 							else
-							{
-								temp_count = temp_count*pow(10, asc2(temp_c[location_of_e + 1]) * 100
+							{	
+								temp_count = temp_count*pow(10, asc2(temp_c[location_of_e + 1]) * 100 
 									+ asc2(temp_c[location_of_e + 2]) * 10 + asc2(temp_c[location_of_e + 2]));
 							}
 							temp_tri.normal[number_of_total] = temp_count;
@@ -223,7 +200,7 @@ void read_stl::read(string address)
 		for (;;)
 		{
 			read_in >> temp;
-
+			
 			if (temp == 'p')
 			{
 				vector<char> temp_r;
@@ -361,7 +338,7 @@ void read_stl::read(string address)
 								{
 									temp_tri.z[i] = temp_count;
 								}
-
+								
 								//cout << temp_count << " ";
 								//cin >> temp_count;
 								temp_count = 0;
@@ -402,7 +379,7 @@ void read_stl::read(string address)
 			minz = temp_tri.z[0];
 			maxz = temp_tri.z[0];
 		}
-
+		
 		for (int i = 0; i < 3; i++)
 		{
 			if (minx > temp_tri.x[i])
@@ -430,7 +407,7 @@ void read_stl::read(string address)
 				maxz = temp_tri.z[i];
 			}
 		}
-
+		
 		triganles.push_back(temp_tri);
 		/*cout << triganles[triganles.size()-1].normal[0] << " " << triganles[triganles.size()-1].normal[1] << " " << triganles[triganles.size()-1].normal[2] << endl;
 		cout << triganles[triganles.size()-1].x[0] << " " << triganles[triganles.size()-1].y[0] << " " << triganles[triganles.size()-1].z[0] << endl;
@@ -443,10 +420,10 @@ void read_stl::read(string address)
 		if (temp == 'e')
 			break;
 	}
-
-	//break;
-
-
+			
+			//break;
+		
+	
 	read_in.close();
 }
 
@@ -454,27 +431,18 @@ void read_stl::read(string address)
 /*
 void read_stl::read_normal(string address)
 {
-fstream read_n;
-char temp;
-read_n.open(address, ios::in);
-
-
+	fstream read_n;
+	char temp;
+	read_n.open(address, ios::in);
+	
+	
 }
 void read_stl::read_vertexs(string address)
 {
-
-fstream read_v;
-read_v.open(address, ios::in);
-char temp;
-
-
+	
+	fstream read_v;
+	read_v.open(address, ios::in);
+	char temp;
+	
+	
 }*/
-
-
-
-ostream & operator<<(ostream & o, const triganle & tir)
-{
-	cout << tir.x << ' ' << tir.y << ' ' << tir.z;
-	return o;
-	// TODO: 在此处插入 return 语句
-}

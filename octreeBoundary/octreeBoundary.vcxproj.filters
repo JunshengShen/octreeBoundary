@@ -15,22 +15,37 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="overlap.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="readStl.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="overlap.cpp">
+    <ClCompile Include="oct.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="readStl.cpp">
+    <ClCompile Include="read_stl.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="generator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="voxelinfo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="oct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="read_stl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cache.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="voxelinfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="generator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

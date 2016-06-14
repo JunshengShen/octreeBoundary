@@ -1,19 +1,16 @@
-#pragma once
-#include <vector>
-#include <ostream>
-using namespace std;
-class triganle
-{
-public:
+//读入STL文件的类   读到vector中
 
+#pragma once
+
+#include <vector>
+using namespace std;
+struct triganle
+{
 	double x[3];
 	double y[3];
 	double z[3];
 	double normal[3];
 };
-
-ostream & operator<<(ostream & o, const triganle & tir);
-
 class read_stl
 {
 public:
